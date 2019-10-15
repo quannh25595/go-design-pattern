@@ -2,9 +2,9 @@ package structural
 
 import "log"
 
-type Object func(int) int
+type Function func(int) int
 
-func LogDecorate(fn Object) Object {
+func LogDecorate(fn Function) Function {
 	return func(n int) int {
 		log.Println("Starting execution with the integer ", n)
 		result := fn(n)
